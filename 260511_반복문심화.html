@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var arr = [1, 2, 3, 4, 5];
+    var len = arr.length;
+   arr[1]  /////0부터 시작
+    for(let i = 0 ; i < len ; i++){
+        console.log(arr[i]);
+    }
+    /////////////////////////////for - in
+    for(let i in arr){
+        console.log(arr[i]); //arr의  index가 순서대로
+    }
+    ///////////////////////////for - of
+    for(let i of arr){
+        console.log(i); // arr에 들어있는 값이 순서대로
+    }
+    ////////////////////////////////////
+    var person = {
+        name: '홍길동',
+        age: 30,
+        tel: '010-1243-5596'
+    };
+
+    person['age']
+    person.age
+/////////////////////객체에서는  of는 불가능
+    for(let i in person){
+        console.log(i); ////person의 key가 순회
+        console.log(i, person[i]);/// person에서 i(key)에 해당하는 value가 출력
+    }
+</script>

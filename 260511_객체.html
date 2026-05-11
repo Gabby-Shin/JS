@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+//객체(붕어빵)(속성들을 묶어놓은 것) == object == instance
+//객체를 만드는 도구, 정의 == class (붕어빵기계)
+// key: value
+    var 게시글1번 = {
+        번호: 1,
+        작성자: "나",
+        비밀번호: 1234,
+  };
+    var 게시글2번 = {
+        번호: 2,
+        작성자: "너",
+        비밀번호: 13234,
+  };
+  console.log(게시글1번);
+  console.log(게시글2번);
+
+  // 객체가 갖는 value 가져오기
+  var writer = 게시글1번.작성자;
+  // []를 사용해서 가져오기 (문자열로 묶기!@)
+  console.log("작성자:", writer)
+  var writer = 게시글1번['작성자']
+  // 객체가 가지는 소성의 value를 변경하기
+  게시글1번.작성자 = "나였다";
+  // 객체에 속성을 추가하기, 기존에 속성이 있으면 수정되고, 아니면 추가됨.
+  게시글1번.작성날짜 = "2023-05-11";
+  console.log(게시글1번);
+
+
+
+</script>

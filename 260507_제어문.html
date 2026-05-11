@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>제어문</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    ///순서도
+    var num = 10;
+    if (num > 6) {
+        console.log('num은 6보다 큽니다.');
+    }
+    console.log('연습 끝')
+
+    var num = 1;
+    if (num > 6) {
+        console.log('num은 6보다 큽니다.');
+    }
+    console.log('연습 끝')
+
+    ////if else
+    var num = 11;
+    if (num > 7) {
+        console.log('num은 7보다 큽니다.');
+    }
+    else {
+        console.log('num은 7보다 작거나 이하다.');
+    }
+    console.log('연습 끝')
+
+    /////////if else if
+    var score = 80;
+    if (score >= 90) {
+        console.log('A학점');
+    }
+    else if (score >= 60) {
+        console.log('B학점');
+    }
+    else if (score >= 30) {
+        console.log('C학점');
+    }
+    else {
+        console.log('F학점');
+    }
+
+    //////////////////중첩 if 문
+    var num1 = 10;
+    var num2 = 20;
+    if (num1 > 5){
+        if (num2 > 10){
+            console.log('야야');
+        }
+        else{
+            console.log('야야야');
+        }
+    }
+    else{
+        console.log('nothing.')
+    }
+//////////////////////////////////
+    var id = "sbs";
+    var pw = "1234";
+
+    ////d아이디, 패스워드가 정해졌을 때
+
+    if ( id === 'sbs'){
+        console.log('id가 일치합니다');
+    }
+        if(pw === '1234'){
+            console.log('pw가 일치합니다');
+            console.log('로그인 성공');
+        }
+        else{
+            console.log('pw가 일치하지 않습니다');
+        }
+    else{
+        console.log('id가 일치하지 않습니다');
+    }
+    // "1" == true
+    // 1 == true
+    // "1" == 1
+
+    ////////////////// switch
+    var fruits = "apple";
+    switch(fruits){
+        case "banana":
+            console.log('banana');
+            break;
+        case "apple":
+            console.log('apple');
+            break;
+        case "orange":
+            console.log('orange');
+            break;
+        default:
+            console.log('unknown fruit');
+            break;
+    }
+
+
+    var number = 90;
+
+    if(number >= 50 && number < 90){
+        console.log('못함')
+    }
+    else if(number >= 90){
+        console.log('잘함')
+    }
+
+    var n1 = 10;
+    var n2 = 20;
+    var n3 = 30;
+
+    if(n1 > n2 && n1 > n3){
+        console.log('n1');
+    }
+    else if(n2 > n1 && n2 > n3){
+        console.log('n2');
+    }
+    else{
+        console.log('n3');
+    }
+//////////////////////다른방법
+    if(n1 < n2){
+        if(n2 < n3){
+            console.log(n3);
+        }else{
+            console.log(n2);
+        }
+    }
+    else{ // n1
+        if(n1 < n3){
+            console.log(n3);
+        }else{
+            console.log(n1);
+        }
+    }
+    ///////////////////////
+    var max = n1;
+    if(n1 < n2){
+        max = n2;
+    }
+    if(max < n3){
+        max = n3;
+    }
+    console.log(max);
+///////////////////////////////////// (number % 2 === 0) 짝수
+    var number = 21;
+        if( number%2==1) {
+            console.log("홀수")
+        }
+        else {
+            console.log("짝수")
+        }
+        //////////////////////////////////////////
+    // 삼항 연산자 ( 조건식 ? 참 : 거짓 )
+    var result = 1 === 1 ? '참' : '거짓';
+    var result = 1 === 1 ? (2 === 2 ? "2" : "3") : 1;
+
+    var restult = n1 < n2 ? (n2 < n3 ? n3 : n2) : (n1 < n3 ? n3 : n1)
+</script>
