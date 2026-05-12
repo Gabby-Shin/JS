@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>반복문 심화</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var arr = [10,20,30,40,50];
+    var len = arr.length;
+    for(let i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+    }
+    // for - in
+    for(let i in arr){
+        console.log(i); // arr의 index가 순서대로
+    }
+    // for - of
+    for(let i of arr){
+        console.log(i); // arr에 들어있는 값이 순서대로
+    }
+
+
+    console.log('==================================');
+    var person = {
+        name: '홍길동',
+        age: 20,
+        tel: '010-1234-5678'
+    }
+    person.age
+    person['age']
+    // for - of 는 불가능!
+    for(let i in person){
+        console.log(i); // person의 key가 순회
+        console.log(person[i]); // person에서 i(key)에 해당하는 value를 가져옴
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

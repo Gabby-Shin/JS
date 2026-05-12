@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script> /////////////()기능
+    var s = `This is test message`;
+    var r  = s.split(' ');
+    console.log(r[r.length-1]);
+    var r = s.substring(13);
+    console.log(r);
+    var r = s.slice(-7);
+    console.log(r);
+
+    ///// 포지션작성 한개작성
+    var r = s.charAt(1);
+    console.log("r:",r);
+
+    ///////////////어떤 문자열로 끝나는지 확인 철자 정확하게 (True/ False)
+    var r = s.endsWith('test message');
+    console.log('r:', r);
+
+    //////////////어떤 문자열로 끝나는지 확인 철자 정확하게 (True/ False), 아이디, 주소 등등
+    var r = s.startsWith('This');
+    console.log('r:', r);
+
+// 어떤 문자열이 포함되어있는 문자열인가?
+    var r = s.includes("is"); // true/ false
+    console.log("r", r);
+
+    // 어떤 문자열이 어느 위치(index)에 있는가?
+    var r = s.indexOf("is"); // true/ false
+    console.log("r:", r);
+
+    ///s를 3번 반복한 문자열
+    var r = s.repeat(3);
+    console.log("r:", r)
+
+    ////////띄워쓰기 기준으로
+    //////나눈 결과는 배열 var r = [this, is, test, message]
+    var r = s.split(" ");
+    console.log("r:",r)
+
+    ///////문자열 내에서 x index부터 y index까지 문자열 잘라서 가져오기
+    var r = s.slice(3, 6); /////y-1까지 가져옴
+    console.log("r:", r)
+    var r = s.substring(3,6);
+    console.log('r:',r)
+
+    //////s에서 test를 문자열을 찾아서 js로 바꿔줘
+    var r = s.replace("test", "JavaScript")
+
+    /////s를 전부 소문자로 변경
+    var r = s.toLowerCase();
+    console.log("r:",r);
+    var r = s.toUpperCase();
+    console.log("r:",r);
+
+    ///////////////공백 제거
+    var s = "    a   b    c   d   "
+    var r = s.trim();
+    console.log("r:",r);
+
+    var r = s.trimStart(); /////앞쪽공백제거
+    console.log("r:",r);
+
+    var r = s.trimEnd(); /////뒤쪽공백제거
+    console.log("r:",r);
+
+   ////////////////////////////////
+
+    var a = "apple";
+    var b = "pen";
+    // 1. a와 b를사용하여 "apple pen"  문자열만들기
+    var r = a + '' +b
+    var r = `${a} ${b}`;
+    console.log(r);
+
+    // APPLE PEN
+    var r = `${a.toUpperCase()} ${b.toUpperCase()}`;
+    console.log(r);
+    var r = `${a.toLowerCase()} ${b.toLowerCase()}`;
+    console.log(r);
+
+    //Apple Pen
+
+    var Apple = a.substring(0,1).toUpperCase() + a.substring(1);
+    b.substring(0,1);
+
+    /////////// message를 사용하여 아래를 해결하세요
+    //1. javascript Practice 문자열 만들기
+    //2. Code 문자열만 가져오기
+
+    var message = "Javascript Code Practice"
+
+    //1. javascript Practice 문자열 만들기
+    var words = message.split(" "); // ["Javascript", "Code", "Practice"]
+    var r = arr[1];
+    var r = message.split('')[1];
+
+
+    // 첫 단어는 소문자로, 세 번째 단어는 그대로 가져와 결합
+    var result = words[0].toLowerCase() + " " + words[2];
+
+    console.log(result); // "javascript Practice"
+
+    var r = message.charAt(0);
+    console.log(r);
+</script>

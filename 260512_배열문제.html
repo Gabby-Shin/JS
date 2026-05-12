@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // 1. s를 d,c,a,d .. 순으로 역순 출력하세요.
+    var s = 'abcddeeaacd';
+    var result = s.split('').reverse().join(''); /////////split 빈문자열로하면 각각 배열이 됨 join_합쳐짐. 출력아니고
+    console.log(result);
+
+    // 배열로 변경해서 reverse 한 다음 출력? 굳이?
+    var arr = s.split('');
+    arr.reverse();
+    console.log(arr);
+    for(let i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+    }
+
+
+    var s = 'abcddeeaacd';
+   // var reverse = "";
+    for (let i = s.length - 1; i >= 0; i--) {  ////i의 length가 0번째 될때까지///기본형
+        reverse += s[i]
+        console.log(s[i]);
+    }
+   // console.log(reverse);
+
+    console.log('==================================')
+    // 2. s 문자열에서 홀수번째 문자만 출력하세요.
+    var s = 'abcddeeaacd';
+    ////var odd ="";
+    for (let i =0; i < s.length; i++){
+        if (i % 2 === 0){
+            ////////odd += s[i];
+            console.log(s[i]);
+        }
+    }
+  /////  console.log(odd);
+
+
+    // 3. s에서 연속되는 문자는 한 개만 출력해서 전부 출력하세요.
+    //// => a,b,c,d,e,a,c,d 가 순서대로 나와야 함
+    var L = 'abcddeeaacd';
+    for (var i =0; i < L.length; i++){   ////0번째의 글자,숫자 =a    i < 11
+        if (L[i] !== L[i-1]){
+            console.log(L[i]);
+        }
+    }
+    /////////////아래_정석 위에는 마이너스 인덱스는 없음
+    for(let i = 0; i < s.length; i++){
+        if(i === 0){
+            console.log(s[i]);
+        }
+        else if( s[i] !== s[i-1] ){ // ?
+            console.log(s[i]);
+        }
+    }
+
+    var s = "Hello World!";
+    // s에서 3번째 이후 문자를 test 로 변경한 문자열 출력
+    //// 정답=> Heltestorld!
+    let A = "";
+    let A = s.substring(0, 4) + "text" + s.substring(7);
+    console.log(A)
+    // 1. 앞부분 "Hel" 추출 (인덱스 0부터 4 직전까지)
+    // 2. 뒷부분 "orld!" 추출 (인덱스 7부터 끝까지)
+
+    var s = "Hello World!";
+    // s에서 3번째 이후 문자를 test 로 변경한 문자열 출력
+    //// 정답=> Heltestorld!
+    var result = s.substring(0, 4) + "test" + s.substring(7);
+    console.log(result);
+
+    var sArr = ['a', 'p', 'p', 'l', 'e'];
+    // sArr 을 사용하여 apple 문자열 생성하세요.
+    var result = sArr[0] + sArr[1] + sArr[2] + sArr[3] + sArr[4];
+
+    var result = sArr.join('');
+
+    var result = "";
+    for(let i = 0; i < sArr.length; i++){
+        result += sArr[i];
+    }
+    console.log(result);
+
+
+    var s = "010-1234-5678";
+    var s = "053-123-1234";
+    // s 문자열이 위의 형태일 때, 전화번호 마지막 4글자를 *로 변경해서 출력
+    /// 010-1234-****
+    /// 053-123-****
+
+    // num_list 에서 마지막 원소가 그 전 원소보다 크면 마지막 원소에서 그 전 원소를 뺀 값을,
+    // 마지막 원소가 그 전 원소보다 크지 않다면 마지막 원소를 두 배한 값을 추가한 배열을 출력.
+    var num_list = [2,1,6];
+    // 이 상황에서는 [2,1,6,5] 이 정답
+    var num_list = [5,2,1,7,5];
+    // 이 상황에서는 [5,2,1,7,5,10] 이 정답
+
+    // 양의 정수 n이 매개변수로 주어질 때,
+    // n이 홀수라면 n 이하의 홀수인 모든 양의 정수의 합을,
+    // n이 짝수라면 n 이하의 짝수인 모든 양의 정수의 제곱의 합을 출력
+    var n = 7; // 이때는 정답 16
+    var n = 10; // 이때는 정답 220
+
+    var arr = [];
+    // 1. arr 배열에 20부터 50까지 추가하세요
+    // 1번 결과에서 3 혹은 4의 공배수만 남기고 제거하세요.
+
+    // 배열에 등차수열 넣기
+    var arr = []; // 일 때, 100 이하의 7의 등차수열의 값들을 추가하세요
+    // [7, 14, 21, ... 93]
+    // 피보나치 수열 만들기
+    var arr = [1, 1]; // 일 때, 50 이하의 피보나치 수열 값들을 추가하세요.
+
+
+
+    var str = "apporoograpemmemprs";
+    var indices = [1, 16, 6, 15, 0, 10, 11, 3];
+    // str 에서 indices 의 원소에 해당하는 인덱스들의 글자를 지우고 이어 붙인 문자열을 출력하세요.
+    // 정답: "programmers"
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

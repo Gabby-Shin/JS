@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>문자열</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var s = 'This is Test Message';
+    console.log( s.length );
+
+    /// s에서 'Message' 가져오기 연습
+    var r = s.split(' ');
+    console.log( r[ r.length-1 ] );
+
+    var r = s.substring(13);
+    console.log(r);
+
+    var r = s.slice(-7)
+    console.log(r);
+
+
+
+    var r = s.charAt(1); // 가져오고 싶은 문자의 위치
+    console.log("r:", r);
+    // 어떤 문자열로 끝나는지 확인 (true/false)
+    var r = s.endsWith("Test Message");
+    console.log("r:", r);
+    // 어떤 문자열로 시작하는지 확인 (true/false)
+    var r = s.startsWith("This");
+    console.log("r:", r);
+    // 어떤 문자열이 포함되어있는 문자열인가?
+    var r = s.includes("is"); // (true/false)
+    console.log("r:", r);
+    // 어떤 문자열이 어느 위치(index)에 있는가?
+    var r = s.indexOf("is");
+    console.log("r:", r); // 2
+    // s를 3번 반복한 문자열
+    var r = s.repeat(3);
+    console.log("r:", r);
+    // 띄어쓰기 기준으로 문자열을 나눠줘
+    // 나눈 결과는 배열! var r = ['This', 'is', 'Test', 'Message'];
+    var r = s.split(" ");
+    console.log("r:", r);
+    // s에서 "Test" 라는 문자열을 찾아서, Javascript로 변경하기
+    var r = s.replaceAll("is", "JavaScript");
+    console.log("r:", r);
+    // 문자열 내에서 x index 부터 y index까지 문자열 잘라서 가져오기
+    var r = s.slice(3, 6); // y-1까지 가져옴..
+    console.log("r:", r);
+    var r = s.substring(3, 6);
+    console.log("r:", r);
+    // s를 전부 소/대문자로 변경해주세요
+    var r = s.toLowerCase();
+    console.log("r:", r);
+    var r = s.toUpperCase();
+    console.log("r:", r);
+
+    var s = "     A B C D    ";
+    r = s.trimStart(); // 앞쪽 공백 제거
+    console.log("r:", r)
+    r = s.trimEnd(); // 뒤쪽 공백 제거
+    console.log("r:", r)
+    r = s.trim(); // 양쪽 공백 제거
+    console.log("r:", r)
+    //////////////////////////////////////////
+    var a = "apple";
+    var b = "pen";
+    // a와 b를 사용하여 아래를 해결하세요.
+    // 1. "apple pen" 문자열 만들기
+    var r = a + ' ' + b;
+    // 2. "APPLE pen" 문자열 만들기
+    var upperA = a.toUpperCase();
+    var r = upperA + ' ' + b;
+    // 3. "Apple Pen" 문자열 만들기
+    var Apple = a.substring(0, 1).toUpperCase() + a.substring(1);
+    var p = b.charAt(0); // p
+    var P = p.toUpperCase(); // P
+    var Pen = P + b.slice(1); // Pen
+    var r = Apple + ' ' + Pen;
+
+    var message = "Javascript Code Practice";
+    // message 를 사용하여 아래를 해결하세요.
+    // 1. "Javascript Practice" 문자열 만들기
+    var r = message.substring(0, 10) + ' ' + message.substring(17);
+    var t1 = message.substring(0, 10);
+    var t2 = message.substring(17);
+    var r = `${t1} ${t2}`;
+    // 2. "Code" 문자열만 가져오기
+    var arr = message.split(' ');
+    var r= arr[1]; // Code
+    var r = message.split(' ')[1];
+    var message = "a b 1 2 3 b a";
+    // 1. a를 전부 z 로 변경하기
+    var r = message.replaceAll("a", "z");
+    // 2. 띄어쓰기 전부 제거된 "ab123ba" 문자열로 만들기
+    var r = message.replaceAll(' ', '');
+    console.log(r);
+
+    // var temp = message.split(' ');
+    // var r = "";
+    // for(let i = 0; i < temp.length; i = i + 2){
+    //     r += temp[i];
+    // }
+    //
+    // var r = "";
+    // for(let i = 0; i < message.length; i = i + 2){
+    //     r += message.charAt(i);
+    // }
+
+    /////////////////////////////////////////////////////
+    ///////// 배열과 연계!
+    var s = "my message";
+    var r = s[0];
+    console.log(r);
+    for(let i = 0; i < s.length; i++){
+        console.log( s[i] );
+    }
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+

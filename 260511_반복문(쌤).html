@@ -1,26 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 <body>
 
 </body>
 </html>
-
-
 <script>
-    let dan = 2;
-    while(dan <= 9) {
-        ///////////////////////////
-        let multiple = 1;
-        while (multiple <= 9) {
+    var n = 1;
+    while(n <= 5){
+        console.log("n:", n);
+        n++; // n = n + 1; n += 1;
+        // n--;
+    }
+    ///////////////////////////////////////
+    // 문자열 code 를 선언한 후,
+    // code에 A를 하나씩 붙여서 AAAAA 가 되면 종료
+    var code = ""; // 문자열 code를 선언 (빈문자열)
+    // code 가 AAAAA 가 아니면 계속하세요.
+    while(code !== "AAAAA"){
+        code = code + "A";
+        console.log("현재 code:", code);
+    }
+    console.log('최종 code:', code);
+    //////////////////////////////////////////////
+    // while 중첩 (while 안에 while)
+    let n1 = 0;
+    while(n1 < 3){
+        // if나 while 안에서 변수를 생성하기. -> 지역변수 생성
+        // 변수를 사용할 수 있는 범위 == Scope(스코프)
+        let n2 = 0;
+        while(n2 < 3){
+            console.log("n1:", n1, "n2:", n2);
+            n2++;
+        }
+        n1++; // n1에 1더하기
+    }
+    // console.log(n2); // 오류!
+    //////////////////////////////////////////////////
+    let num = 1;
+    // console.log(`num은 ${num}이다.`)
+    // let message = '2 x ' + num + '=' + (2 * num)
+    while(num <= 9){
+        console.log(`2 x ${num} = ${2 * num}`);
+        num++;
+    }
+    ///////////////////////////////////////////////////
+    let dan = 2; // 2단
+    while(dan <= 9){
+        let multiple = 1; // x1
+        while(multiple <= 9){
             console.log(`${dan} x ${multiple} = ${dan * multiple}`)
             multiple++;
         }
-        /////////////////////////
         dan++;
     }
+    console.log('============================================');
+    let multiple = 1; // x1
+    while(multiple <= 9){
+        let message = "";
+        let dan = 2; // 2단
+        while(dan <= 9){
+            message += (`${dan} x ${multiple} = ${dan * multiple}\t`);
+            dan++;
+        }
+        console.log(message);
+        multiple++;
+    }
+    console.log('============================================');
+    let numberThree = 1;
+    let mul = 6;
+    while(numberThree < 100){
+        if(numberThree % mul === 0){
+            console.log(numberThree);
+        }
+        numberThree++;
+    }
+    console.log('============================================');
+    // 여기서의 i는 지역변수!
+    for(let i = 0; i < 3; i++){
+        console.log("안녕?");
+    }
+    console.log('============================================');
+    // console.log(2 x 1 = 2)
+    for(let i = 1; i <= 9; i++){
+        console.log(`2 x ${i} = ${2 * i}`);
+    }
+    console.log('============================================');
+    for(let d = 2; d <= 9; d++){
 
+        for(let m = 1; m <= 9; m++){
+            console.log(`${d} x ${m} = ${d * m}`);
+        }
+
+    }
+
+    console.log('============================================');
+
+    for(let i = 1; i < 20; i++){
+        if(i % 11 === 0){
+            continue; // 실행되면 즉시 증감식으로 이동
+        }
+        console.log(i);
+    }
+    console.log('============================================');
+    let ii = 0;
+    while(ii < 10){
+        if(ii % 2 === 0){
+            ii++;
+            continue; // 즉시 조건식으로 이동
+        }
+        console.log(ii);
+        ii++;
+    }
+    /////////////////////////////////////////////////////
+    /// 합계 공식
+    let sum = 0; // 현재까지의 합계를 저장할 변수
+    for(let i = 1; i <= 10; i++){
+        sum += i; // sum = sum + i;
+        console.log(sum);
+    }
+    console.log('최종 sum:', sum);
+    /////////////////////////////////////////////////////
+    // 5! factorial
+    let f = 1; // 현재까지의 합계를 저장할 변수
+    for(let i = 1; i <= 5; i++){
+        f *= i; // f = f * i;
+        console.log(f);
+    }
+    console.log('최종 f:', f);
+
+    /////// 정수 su이 있을때, su의 약수의 합 구하기
+    let su = 120;
+    let sum2 = 0;
+    for(let i = 1; i <= su; i++){
+        if(su % i === 0) { // i가 120의 약수인가?
+            console.log(i); //약수를 출력
+            sum2 += i; // 약수의 합을 구하기
+        }
+    }
+    console.log('약수의 합:', sum2);
+    //////////////////////////////////////////////
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
