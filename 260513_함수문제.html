@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // marks 에 있는 value들 (점수들)의 평균을 return 하세요!
+    function get_average(marks){
+        let 국어점수 = marks['국어'];
+        let 영어점수 = marks['영어'];
+        let 수학점수 = marks['수학'];
+        let 평균 = 국어점수 + 영어점수 + 수학점수 / 3;
+        return 평균;
+    }
+    marks = { '국어':90, '영어':80, '수학':85 };
+    let average = get_average(marks);
+    console.log(`평균은 ${average}점입니다`);
+
+    let sum = 0;   /////합계공식
+    let sum2 = sum;
+    for(let key in marks){
+        let value = marks[key];
+        sum += value;
+        sum2 += 1;
+    }
+    console.log(sum/ sum2); /// length 는 갯수를 구해주지앟음, sum 하나더 만들기
+
+
+    ///////////////////////////////////////////////
+    // 700원짜리 음료수를 몇 개 뽑을 수 있는지 모든 경우의 수 출력하기
+    function vending_machine(money){
+
+    }
+    vending_machine(3000);
+    // 음료수 = 0개, 잔돈 = 3000원
+    // 음료수 = 1개, 잔돈 = 2300원
+    // 음료수 = 2개, 잔돈 = 1600원
+    // 음료수 = 3개, 잔돈 = 900원
+    // 음료수 = 4개, 잔돈 = 200원
+
+</script>

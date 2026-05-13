@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    // 형태1: 전달되는 값(인수) 없고, 결과(반환값)도 없음
+    function volume_up(){
+        console.log('음량이 올라갔다');
+    }
+    volume_up();
+    // 형태2: 전달되는 값(인수) 있고, 결과(반환값)도 없음
+    function volume_down(volume){
+        console.log(`음량이 ${volume} 내려갔다`);
+    }
+    volume_down(3); // 3: 인수(argument)
+    volume_down(4);
+    volume_down(10);
+    // 형태3: 전달되는 값(인수) 없고, 결과(반환값)도 있음
+    function plus(){
+        let result = 1 + 3;
+        console.log(result);
+        return result; // result 값을 반환
+    }
+
+    let r = plus();
+    console.log("plus 결과:", r);
+
+    // 형태4: 전달되는 값(인수) 있고, 결과(반환값)도 있음
+    function calc(a, b){
+        let result = a + b;
+        return result; // 결과(반환값)도 있음
+    }
+    let r2 = calc(2, 3); // 전달되는 값(인수) 있고
+    console.log(r2);
+    /////////////////////////////////////////////
+    function func1(data){
+        console.log(data + 10);
+    }
+    // 어떤 데이터든 전달 가능
+    func1();
+    func1(20);
+    func1('abc');
+    func1([1,2,3]);
+    func1({ a: 1, b: 2 });
+
+    function func2(a, b, c){
+        console.log(a, b, c);
+    }
+    // 내가 원하는 개수 전달 가능
+    func2(1); // 전달안된 것은 undefined 처리
+    func2(1,2);
+    func2(1,2,3);
+    func2(1,2,3,4);
+    func2(1,2,3,4,5); // 넘치는 값은 버려짐
+
+    /// 이 형태는 사용안하는게 좋습니다. (비추천)
+    function func3(a, b){
+        console.log(a, b);
+    }
+    func3(a=1, b=2); // 받아주는 변수 이름 그대로 명시 가능
+    func3(a=10, 20); // a에는 10 들어가고 b에는 20 들어감
+    func3(30, a=40); // a에는 b에는 40들어감 ? -> 사실상 오류
+
+    function func4(){
+        // return이 없는데 func4 의 결과를 저장해서 쓰면?
+    }
+    let r3 = func4();
+    console.log(`r3: ${r3}`); // undefined
+    ////////////////////////////////////////////////////
+    function 잔돈계산기(money, coffee) {
+        let menu = {
+            '아메리카노': 1000,
+            '카페라떼': 1500,
+            '카푸치노': 2000,
+        };
+        let price = menu[coffee]; // 커피 가격
+        // 없는 커피를 주문했다면?
+        if(price === undefined){
+            console.log('없는 커피입니다, 주문못함!');
+            return money; // 낸 돈을 잔돈으로 내준다
+        }
+        // 낸 금액이 주문한 커피 가격보다 적다면?
+        if(money < price){
+            console.log('돈이 부족합니다, 주문못함!');
+            return money; // 낸 돈을 잔돈으로 내준다
+        }
+        // 제대로 주문했다면 잔돈을 계산한다
+        let change = money - price;
+        return change; // 잔돈을 반환한다
+    }
+
+    var 잔돈 = 잔돈계산기(100, '아메리카노');
+    console.log('계산된 잔돈은:', 잔돈);
+    var 잔돈 = 잔돈계산기(2000, 'ㅋㅋㅋㅋ');
+    console.log('계산된 잔돈은:', 잔돈);
+    var 잔돈 = 잔돈계산기(10000, '아메리카노');
+    console.log('계산된 잔돈은:', 잔돈);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
