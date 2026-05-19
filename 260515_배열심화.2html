@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var flag = true; // 일단 전부 짝수라고 생각하자
+    var arr = [1,23,5,1365,356,236246,462,2];
+    for(let i = 0; i < arr.length; i++){
+        let data = arr[i];
+        if(data % 2 !== 0){
+            flag = false;
+        }
+    }
+    // console.log(flag);
+    /////////////////////////////////////////////
+    function func1(number){
+        if(number % 2 === 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    var arr = [2,4,2,44,4];
+    var result = arr.every(func1);
+    console.log(`every의 결과: ${result}`);
+    /////////////////////////////////////////////////////////
+    var arr = [2,4,2,44,4];
+    var result = arr.every( number => number % 2 === 0  );
+    console.log(`every의 결과: ${result}`);
+
+
+
+
+
+
+
+
+
+</script>
