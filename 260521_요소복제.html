@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    section{
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+    }
+    article{
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        background-color: lightcoral;
+    }
+</style>
+<body>
+    <section>
+        <div>DIV입니당</div>
+    </section>
+    <article>
+        <span>
+            article입니당
+        </span>
+    </article>
+    <button type="button">붙여넣으세용</button>
+</body>
+</html>
+
+<script>
+    let button = document.querySelector('button');
+    let section = document.querySelector('section');
+    let article = document.querySelector('article');
+
+    button.onclick = () => {
+    //     let newDiv = document.createElement('div'); //새로운 div 요소생성
+    //     newDiv.textContent = '새로운 div'; //div안에 글자넣기
+    //     article.appendChild(newDiv); //article에 div추가, article의 마지막  자식으로 추가
+    // }
+        let cloned = section.cloneNode(true);
+        article.appendChild(cloned);
+    }
+</script>

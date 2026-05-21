@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <section>
+    <div>
+        DDDDDDDDD
+    </div>
+      <ul>
+          <li>Li1</li>
+          <li>Li2</li>
+      </ul>
+  </section>
+
+    <article>
+        <div>article에 있는 div당</div>
+    </article>
+</body>
+</html>
+
+<script>
+    let section = document.querySelector('section');
+
+    let stc = section.textContent;  //텍스트전체 공백포함
+    let sit = section.innerText; // 공백없이 텍스트만 / 화면에 보이는 텍스트 css영향
+    let sih = section.innerHTML; // 전체문자열 태그까지 적용해서포함
+    console.log(`stc: ${stc}`);
+    console.log(`sit: ${sit}`);
+    console.log(`sih: ${sih}`);
+
+///////////////////
+    let article = document.querySelector('article');
+    // article 내부 싹 다 지우고 글자 적어버림
+    //article.textContent = ' <b>article입니당</b>  ';
+    //article.innerText = '  <b>article입니당</b>      ';
+
+    // innerHTML 은 내부 싹 지우고 태그를 넣어버림! 태그로서 적용됨
+    article.innerHTML = '  <b>article입니당</b>      ';
+</script>

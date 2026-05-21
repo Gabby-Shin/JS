@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>1번</li>
+    <li>2번</li>
+    <li class="list">3번</li>
+    <li>4번</li>
+    <li class="list">5번</li>
+</ul>
+
+<input type="text">
+
+</body>
+</html>
+<script>
+    //가져오는 get은 변수에 넣으세요
+    let ulElm = document.querySelector('ul');
+    ulElm.style.backgroundColor = 'pink';
+
+    let liElems = document.querySelectorAll('li');
+    let liElem2 = liElems[1];
+    liElem2.style.backgroundColor = 'black';
+    liElem2.style.color = 'white';
+
+    liElems[3].remove();
+
+    // list 클래스를 가진 요소들만 전부 가져오기!
+    let listElems = document.querySelectorAll('.list');
+    listElems[0].style.fontSize = '24px';
+    listElems[1].style.color = 'green';
+
+    for(let i = 0; i < listElems.length; i++){
+        listElems[i].style.fontSize = '24px';
+    }
+    ///////////
+    let inputElm = document.querySelector('input');
+    inputElem.setAttribute("readonly", "")
+    inputElem.setAttribute("vlaue", "테스트!")
+
+    //문서에 input태그를 새로 생성
+    //생성한 요소를 변수에 가져옵니다. 변수에 안가져오면 나중에 사용할수없음
+    let newInputElem = document.createElement('input');
+
+    // 문서의 특정 위치에 넣어줘야(배치) 하는데? -> 기준점 필요!
+    // 어떤 요소의 자식으로 넣는거(배치) ok.
+    /// 문서의 body 태그 안에 자식으로 넣을게요(배치할게요).
+    document.body.appendChild( newInputElem );
+
+
+
+
+
+
+
+
+</script>

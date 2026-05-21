@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function solution(money) {
+        let count = 0; // 음료수 개수
+        while(money > 0){
+            console.log(`음료수 = ${count}개, 잔돈 = ${money}원`)
+            count += 1
+            money -= 5500;
+        }
+        let arr = [];
+        arr.push(count-1);
+        arr.push(money+5500);
+        // let arr = [count-1, money+5500];
+        return arr;
+    }
+    var result = solution(5500);
+    console.log(result);
+    var result = solution(15000);
+    console.log(result);
+
+    ////////////////////////
+
+    function solution(my_string, letter){
+        return my_string.split([6]).join("");
+    }
+
+    let my_string = ["abcdef"];
+    let letter = ["f"];
+
+
+
+
+
+
+</script>
