@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--    동기(sync):정직하게 순서대로 함 (직렬)-->
+    <!--    비동기(async):순서가 없이 동시에 함 (병렬)-->
+    <!--    단순 script태그를 작성하면? -> 문서로딩 중 script 태그를 만나면 즉시 다운로드 후 전부 실행 9다운로드 할 동안 코드 정지)-->
+    <!--    script태그에 defer를 넣으면? -> async 내용+다운로드 완료해도 실행 즉시 안되고,dom트리 전부 생성완료하면 실행됨.-->
+   <script src="260526_문서이벤트.js" defer></script>
+    <!-- script태그에 async를 넣으면 문서로딩 중 script태그를 만났을 때, 일단 js파일을 전부 다운로드 시작한다. (시작만) 그리고 다운로드가 완료되면 즉시 실행됨 (병렬로)-->
+    <script type=module src="260526_문서이벤트_1.js" defer></script>
+    <script type=modyle "260526_문서이벤트_2.js" defer></script>
+
+</head>
+<style>
+    section, img{
+        width: 300px;
+        height: 300px;
+        background-color: darkblue;
+    }
+</style>
+<body>
+    <section>박스</section>
+    <img src="짱구1.jpg" height="225" width="225"/>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

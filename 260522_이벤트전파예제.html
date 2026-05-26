@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트전파예제</title>
+</head>
+<style>
+    section{
+        transition-duration: 1s;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 300px;
+        background-color: lightblue;
+    }
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+        text-align: center;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <section>
+        <div>width: 80%</div>
+        <div>width: 60%</div>
+        <div>width: 40%</div>
+    </section>
+</body>
+</html>
+
+<script>
+    //div를 각각 클릭했을 때 section의 width값이 커지게
+let section = document.querySelector('section');
+let div = section.querySelectorAll('div');
+
+
+
+///////////////////////////////////////////////////////////
+    // let div1 = div[0];
+    // let div2 = div[1];
+    // let div3 = div[2];
+    // div1.onclick = () => {
+    //     for (let i = 100; i >= 80; i--) {
+    //         section.style.width = i + '%';
+    //     }
+    // }
+    //
+    // div2.onclick = () => {
+    //     section.style.width = '60%';
+    // }
+    // div3.onclick = () => {
+    //     section.style.width = '40%';
+    // }
+///////////////////////////////////////////////////
+    //
+    // div[0].onclick = () => {
+    //     section.style.width = '80%';
+    // }
+    // div[1].onclick = () => {
+    //     section.style.width = '60%';
+    // }
+    // div[2].onclick = () => {
+    //     section.style.width = '40%';
+    // }
+
+    // <body>
+    // <section>
+    //     <div class="w-80">Width: 80%</div>
+    //     <div class="w-60">Width: 60%</div>
+    //     <div class="w-40">Width: 40%</div>
+    // </section>
+    // </body>
+    // </html>
+    // <script>
+    //     let section = document.querySelector('section');
+    //     let divs = document.querySelectorAll('div');
+    //     let widths = [80, 60, 40];
+    //     for (let i = 0; i < divs.length; i++) {
+    //     let div = divs[i];
+    //     div.onclick = () => {
+    //     // 방법1
+    //     // section.style.width = (80 - i * 20) + '%';
+    //     // 방법2
+    //     // section.style.width = widths[i] + '%';
+    //     // 방법3
+    //     let clazz = div.getAttribute('class'); // w-80;
+    //     let w = clazz.split('-')[1]; //['w', '80']
+    //     section.style.width = w + '%';
+    //
+    //
+    //     div.style.backgroundColor = 'red';
+    // }
+    // }
+    ///</script>
+
+</script>

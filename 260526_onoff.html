@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ON OFF</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    /*li{*/
+    /*    display: inline-block;*/
+    /*    cursor: pointer;*/
+    /*    padding: 14px;*/
+    /*    font-size: 24px;*/
+    /*    border: 1px solid #ccc;*/
+    /*    border-radius: 12px;*/
+    /*    &:hover{*/
+    /*        background-color: black;*/
+    /*        color: white;*/
+    /*    }*/
+    /*}*/
+
+    li.active{
+        background-color: black;
+        color: white;
+    }
+
+</style>
+<body>
+<ul>
+    <li class="active">목록1</li>
+    <li>목록2</li>
+    <li>목록3</li>
+</ul>
+</body>
+</html>
+
+<script>
+    // const items = document.querySelectorAll("li");
+    //
+    // //모든 li에 클릭이벤트연결
+    // items.forEach(item => {
+    //     item.addEventListener("click", () => {
+    //
+    //         // 클릭하면 전체 초기화
+    //         items.forEach(li => {
+    //             li.style.backgroundColor = "";
+    //             li.style.color = "";
+    //         });
+    //
+    //         // 선택된 것만 스타일 적용
+    //         item.style.backgroundColor = "black";
+    //         item.style.color = "white";
+    //     });
+    // });
+
+    /*********************************************/
+    // function init(){
+    //     for(let j = 0; j < lies.length; j++){
+    //         lies[j].style.backgroundColor = 'white';
+    //         lies[j].style.color = 'black';
+    //     }
+    // }
+    //
+    // let lies = document.querySelectorAll('li');
+    // for(let i = 0; i < lies.length; i++){
+    //     lies[i].onclick = () => {
+    //         init();
+    //         lies[i].style.backgroundColor = 'black';
+    //         lies[i].style.color = 'white';
+    //     }
+    // }
+
+    /*********************************************/
+    const items = document.querySelectorAll("li");
+
+    items.forEach(item => {         //“각 li마다 한 번씩 실행” 배열안의 모든요소를 다 꺼내서 반복실행
+        item.addEventListener("click", () => {    //클릭 이벤트등록, 이 li클릭되면 코드 실행해
+
+            items.forEach(li => li.classList.remove("active"));   //li에서 active 클래스 제거
+
+            item.classList.add("active");                //클릭된 요소에 active 클래스 추가, 이것만 선택 상태로 만들기
+        });
+    });
+
+    // <style>
+    //     *{
+    //     margin: 0;
+    //     padding: 0;
+    // }
+    //     li{
+    //     display: inline-block;
+    //     cursor: pointer;
+    //     padding: 14px;
+    //     font-size: 24px;
+    //     border: 1px solid #ccc;
+    //     border-radius: 12px;
+    //     &:hover{
+    //     background-color: black;
+    //     color: white;
+    // }
+    // }
+    //     li.active{
+    //     background - color: black;
+    //     color: white;
+    // }
+    //     .a{
+    //     font - weight: bold;
+    // }
+    //     div{
+    //     height: 200px;
+    // }
+    //     .d1{
+    //     display: none;
+    //     background-color: #e33f3f;
+    // }
+    //     .d2{
+    //     display: none;
+    //     background-color: darkblue;
+    // }
+    //     .d3{
+    //     display: none;
+    //     background-color: greenyellow;
+    // }
+    //     div.active{
+    //     display: block;
+    // }
+    // </style>
+    // <body>
+    // <ul>
+    //     <li className="a active">목록1</li>
+    //     <li className="a">목록2</li>
+    //     <li className="a">목록3</li>
+    // </ul>
+    //
+    // <section>
+    //     <div className="d1"></div>
+    //     <div className="d2"></div>
+    //     <div className="d3"></div>
+    // </section>
+    // const tabs = document.querySelectorAll(".a");
+    // const boxes = document.querySelectorAll("section div");
+    //
+    // tabs.forEach((tab, index) => {
+    //     tab.addEventListener("click", () => {
+    //
+    //         // 1. tab active 처리
+    //         tabs.forEach(t => t.classList.remove("active"));
+    //         tab.classList.add("active");
+    //
+    //         // 2. 모든 박스 숨기기
+    //         boxes.forEach(box => {
+    //             box.style.display = "none";
+    //         });
+    //
+    //         // 3. 해당 박스만 보이기
+    //         boxes[index].style.display = "block";
+    //     });
+    // });
+</script>
+
+
+
+
+
+

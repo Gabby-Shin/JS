@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트전파</title>
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+    }
+    #inner{
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+    }
+</style>
+<body>
+    <div id="outer">
+        <span>outer</span>
+        <div id="inner"></div>
+    </div>
+</body>
+</html>
+<script>
+    let outer = document.querySelector('#outer');
+    let inner = document.querySelector('#inner');
+    ///// 아래처럼 가져와도 ok
+    // let divs = document.querySelectorAll('div');
+    // let outer = divs[0];
+    // let inner = divs[1];
+
+    // outer.onclick = (event) => {                               //onclick에서 쓰면 기본형은 bubbling
+    //     console.log('outer clicked');
+    //     // 실제로 클릭된 요소 == target
+    //     console.log("target:", event.target);
+    //     // 현재 함수가 실행되고 있는 요소 == currentTarget
+    //     console.log("currentTarget:", event.currentTarget);
+    // }
+    // inner.onclick = (event) => {
+    //     console.log('inner clicked');
+    //     console.log("target:", event.target);
+    //     console.log("currentTarget:", event.currentTarget);
+    // }
+
+    // outer.addEventListener('click', (event) => {  ///addEventListener 기본형 --- inner 클릭해도 outer까지 클릭됨. 이벤트전파, False->Bubbling (하위요소에서 상위요소)
+    //     console.log('outer clicked');
+    //     // 실제로 클릭된 요소 == target
+    //     console.log("target:", event.target);
+    //     // 현재 함수가 실행되고 있는 요소 == currentTarget
+    //     console.log("currentTarget:", event.currentTarget);
+    // }, true);                                                      ///True넣으면 Capturing(상위요소 하위요소까지 순서대로 진행) 거꾸로
+    // inner.addEventListener('click', (event) => {
+    //     console.log('inner clicked');
+    //     console.log("target:", event.target);
+    //     console.log("currentTarget:", event.currentTarget);
+    // }, true);
+
+    inner.addEventListener('click', (event) => {
+        event.stopPropagation();
+        console.log('inner clicked');
+        console.log("target:", event.target);
+        console.log("currentTarget:", event.currentTarget);
+    },false);
+
+
+
+</script>

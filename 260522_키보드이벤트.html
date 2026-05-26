@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>키보드이벤트</title>
+</head>
+<style>
+    section{
+        display:inline-block;
+        width: 300px;
+        height: 300px;
+        background-color: lightblue;
+        border: 1px solid black;
+    }
+</style>
+<body>
+    <textarea></textarea>
+
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+</body>
+</html>
+
+<script>
+    // 문제. asdf 각 키를 눌렀을 때, 키에 맞는 색상을 자신이 정해서,
+    // 각 section의 배경색을 변경하세요.
+    // 예시) a를 누르면 첫번째 section의 색이 빨강이 됩니다.
+    // 단, 어떤 키를 눌렀을 때, 해당 박스의 색만 변경되어야 하고,
+    // 나머지 박스는 색이 초기화되어야 합니다.
+
+    let sections = document.querySelectorAll('section')
+    window.onkeydown = (event) => {                            ////함수(event)안에서 작동해야해서 if를 안에 넣어줘야함
+        let key = event.key;
+        if(key === 'a'){
+            sections[0].style.backgroundColor = "red";
+        }
+        if(key === 's'){
+            sections[1].style.backgroundColor = "red";
+        }
+        if(key === 'd'){
+            sections[2].style.backgroundColor = "red";
+        }
+        if(key === 'f'){
+            sections[3].style.backgroundColor = "red";
+        }
+    }
+
+
+
+
+    // let textarea = document.querySelector('textarea');
+    // textarea.onkeydown = (event) => {
+    //     console.log('keydown');                 ///////////////////Key Down = 키를 누르는 순간,누르고잇는 동안 동작
+    //     let key = event.key;
+    //     console.log(`눌린 key: ${key}`);
+    // }
+    // textarea.onkeyup = () => {
+    //     console.log('keyup')                   //////////////////Key Up = 눌렀던 키를 떼는 순간, 뗏을 때 실행
+    //     console.log(textarea.value);
+    // }
+    // // input 요소(input, textarea)에 value 가 변경되면 실행
+    // // 데이터를 입력했거나, 체크박스 체크를 했거나.. 등등
+    // textarea.oninput = () => {
+    //     let text = textarea.value; //작성된 문자를 가져옴
+    //     console.log(textarea.value.length); //문자의 길이는???
+    //
+    // }
+</script>
+

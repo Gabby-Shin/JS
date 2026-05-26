@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        position: relative;
+        width: 1000px;
+        height: 600px;
+        background-color: greenyellow;
+        overflow: hidden;
+    }
+    .carousel{
+        display: inline-flex;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+        height: 100%;
+        background-color: darkblue;
+        cursor: pointer;
+        transition-duration: 1s;
+        /*transform: translateX(-2000px);*/
+    }
+    .carousel > .slide{
+        width: 1000px;
+        border: 1px solid black;
+        background-color: lightgray;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .slide{
+        position: relative;
+    }
+    .slide > div{
+        position: absolute;
+        width: 70%;
+        left: 10px;
+        bottom: 10px;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+        font-size: 50px;
+    }
+    .button_container{
+        display: flex;
+        position: absolute;
+        padding: 0 20px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .button_container > button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+        z-index: 99;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <section class="container">
+        <div class="button_container">
+            <button type="button">&lt;</button>
+            <button type="button">&gt;</button>
+        </div>
+        <ul class="carousel">
+            <li class="slide">
+                <div>
+                    <h2>title1</h2>
+                </div>
+                <img src="짱구1.jpg">
+            </li>
+            <li class="slide">
+                <div>
+                    <h2>title1</h2>
+                </div>
+                <img src="짱구2.jpg">
+            </li>
+            <li class="slide">
+                <div>
+                    <h2>title1</h2>
+                </div>
+                <img src="짱구3.jpg">
+            </li>
+        </ul>
+    </section>
+
+
+
+</body>
+</html>
+<script>
+
+    const carousel = document.querySelector('.carousel');
+    const [leftBtn, rightBtn] = document.querySelectorAll('.button_container > button');
+    document.querySelectorAll('.slide img').forEach(img => {
+        img.draggable = false;
+    })
+
+
+    let movedX = 0;
+    leftBtn.onclick = () => {
+        // if(movedX > 0){
+        // }
+        movedX = movedX + 1000;
+        carousel.style.transform = `translateX(${movedX}px)`;
+    }
+    rightBtn.onclick = () => {
+        // if(movedX > -2000){
+        // }
+        movedX = movedX - 1000;
+        carousel.style.transform = `translateX(${movedX}px)`;
+    }
+
+    // const carousel = document.querySelector('.carousel');
+    // const [leftBtn, rightBtn] = document.querySelectorAll('.button_container > button');
+    // let movedX = 0;
+    // leftBtn.onclick = () => {
+    //     if(movedX >= 0){
+    //         movedX = movedX + 1000;
+    //     }
+    //     carousel.style.transform = `translateX(${movedX}px)`;
+    // }
+    // rightBtn.onclick = () => {
+    //     if(movedX < 3000){
+    //         movedX = movedX - 1000;
+    //     }
+    //     carousel.style.transform = `translateX(${movedX}px)`;
+    // }
+</script>

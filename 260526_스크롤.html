@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>스크롤</title>
+</head>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    h1{
+        font-size: 7rem;
+        color: pink;
+    }
+    section{
+        position: relative;
+        background-color: lightcoral;
+        padding: 100px 0;
+
+    }
+    section > div{
+        width: 300px;
+        height: 300px;
+        background-color: yellow;
+        position: absolute;
+        left: 0;
+        /*right: 0;*/
+        /*animation-name: move_box;*/
+        animation-duration: 1s;
+        /*animation-iteration-count: infinite;*/
+        animation-direction: alternate;
+    }
+    a{
+        font-size: 4rem;
+        border-radius: 12px;
+        padding: 10px;
+        border: 1px solid black;
+    }
+
+    @keyframes move_box{
+        from{
+            left: 0;
+        }
+        to{
+            left: 100%;
+        }
+    }
+</style>
+<body>
+<a href="#title">제목으로 이동</a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<section id="title">
+    <h1>제목</h1>
+    <div></div>
+</section>
+</body>
+</html>
+
+
+<script>
+    let section = document.querySelector('section');
+    window.onscroll = () => {
+        console.log('scroll 중임...');
+        const top = section.getBoundingClientRect().top;
+        console.log(top);
+    }
+
+
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 위치</title>
+</head>
+<style>
+    div{
+        width: 300px;
+        height: 300px;
+        background-color: rosybrown;
+    }
+</style>
+<body>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<div></div>
+<div></div>
+</body>
+</html>
+<script>
+    document.querySelector('div').onclick = (event) => {
+        // console.log('width:', event.width);
+        // console.log('height:', event.height);
+        console.log('screenX:', event.screenX); ///실제모니터의 0,0위치에서 클릭한 위치가 얼마나 떨어져 있는지 나타냄
+        console.log('screenY:', event.screenY); //전체모니터스크린
+
+        console.log('pageX:', event.pageX);   ////스크롤을 포함해서 현재 웹 페이지 내에서 요소가 클릭 한 위치가 얼마나 떨어져있는지
+        console.log('pageY:', event.pageY);     //브라우저 페이지 전체
+
+        console.log('clientX:', event.clientX); ////스크롤을 포함하지 않고 현재 화면을 기준으로
+        console.log('clientY:', event.clientY); ///브라우저 페이지 일부
+
+        console.log('offsetX:', event.offsetX);  ////문서에서의 위치나 스크롤 상관없이, 요소 자체의 위치로부터 클릭한 위치가 얼마나 떨어져있는지
+        console.log('offsetY:', event.offsetY);  //요소
+    }
+
+
+</script>
