@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>반복문</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    // while 문, 반복종료 조건을 설정 (a를 입력받을 때까지 출력), False  될때까지 반복실행
+    var a = 1;
+    while(a <=5){     ////while(조건식){자바스크립트 코드, 증감식/ 조건,자바,증감 순서대로 실행}
+        console.log("a:", a);
+        a++; // a = a + 1 , a--;
+    }
+
+    ///////문자열 code를 선언한 후,
+    //code에 A를 하나씩 붙여서 AAAAA가 되면 종료
+
+    var code = "" //문자열 code를 선언 (빈문자열)
+    //code가 AAAAA가 아니면 계속하세요,
+    while(code != "AAAAA"){
+        code = code + "A";
+        console.log('현재코드 :' + code);
+    }
+    console.log(code);
+
+    ///while 중첩 (while 안에 while) while 먼저 끝나고 n2 = 0이랑 n1++실행
+    var n1 = 0;          //바깥쪽 n1을 담당, 0-1-2-3으로 변함 3일때 종료
+    var n2 = 0;         //안쪽 n2을 담당, 0-1-2-3으로 변함 3일때 종료
+    while(n1 < 3){
+        while(n2 < 3){
+            console.log('n1:', n1, 'n2:', n2);
+            n2++;
+        }
+        n2 = 0;
+        n1++; // n1에 1더하기
+    }
+
+    //구구단 2단 반복되는 부분 변수
+
+    let num = 1;
+    ///// console.log(`num은 ${num}이다`);
+
+    while(num <=9){
+        console.log(`2 x ${num} = ${2 * num}`)
+        num++;
+    }
+
+    //////구구단
+    let dan = 2;
+    while(dan <= 9){
+        let multiple = 1; //
+        while(multiple <= 9){
+            console.log(`${dan} x ${multiple} = ${dan * multiple}`)
+            multiple++;
+        }
+        dan++;
+    }
+    ///////////////////////1-100사이에 3의 배수
+    let three = 1;
+    let mul = 3;
+    while(three < 100){
+        if(three % mul == 0){
+            console.log(three);
+        }
+        three++;
+    }
+
+    //// for 문 ,원하는 반복횟수
+    // 여기서의 i는 지역변수!
+    for(let i = 0; i < 3; i++){
+        console.log("안녕?");
+    }
+    // 구구단 2단
+    for(let i = 1; i <= 9; i++){
+        console.log(`2 x ${i} = ${2 * i}`);
+    }
+    //continue 실행되면 즉시 증감식으로 이동 (11빼고 다 출력)
+    for(let i = 1; i < 15; i++){
+        if(i % 11 === 0){
+            continue;
+        }
+        console.log(i);
+    }
+    ///continue; 홀수출력 !!// 즉시 조건식으로 이동
+    let ii = 0;
+    while(ii < 10){
+        if(ii % 2 === 0){
+            ii++;            //증가먼저해야 무한루프안생김. False는 아래에서 ++;
+            continue; // True면 즉시 조건식으로 이동
+        }
+        console.log(ii);
+        ii++;
+    }
+
+    /*************************************************************/
+
+    /// 합계 공식
+    let sum = 0; // 현재까지의 합계를 저장할 변수
+    for(let i = 1; i <= 10; i++){
+        sum += i; // sum = sum + i;
+        console.log(sum);
+    }
+    console.log('최종 sum:', sum);
+    /////////////////////////////////////////////////////
+    // 5! factorial
+    let f = 1; // 현재까지의 합계를 저장할 변수
+    for(let i = 1; i <= 5; i++){
+        f *= i; // f = f * i;
+        console.log(f);
+    }
+    console.log('최종 f:', f);
+
+    /////// 정수 su이 있을때, su의 약수의 합 구하기
+    let su = 120;
+    let sum2 = 0;
+    for(let i = 1; i <= su; i++){
+        if(su % i === 0) { // i가 120의 약수인가?
+            console.log(i); //약수를 출력
+            sum2 += i; // 약수의 합을 구하기
+        }
+    }
+    console.log('약수의 합:', sum2);
+    //////////////////////////////////////////////
+</script>

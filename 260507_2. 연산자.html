@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    ///// 대입 연산
+    console.log( 5 + 3 );
+    console.log( 5 - 3 );
+    console.log( 5 * 3 );
+    console.log( 5 / 3 );
+    console.log( 5 % 3 );
+
+    var a = 2;
+    var b = a + 3; // 5
+    var a = a + 3; // 5
+
+    a += 3; // 5  a = a + 3
+    console.log(a);  //8
+
+    b *= 2;  //b = b * 2
+    console.log(b);  //10
+
+    //////논리 연산
+    var c = 10;
+    var d = 20;
+    var result1 = c > 10 && d < 30;    //&& and연산자, 둘다 참이어야 true가 됨. 하나라도 false면 false로 결과값 반환
+    console.log(result1); // false
+
+    var result2 = c == 10 || d < 10;   //   || or 연산자, 하나라도 true면 true로 결과값 반환
+    console.log(result2); // true
+
+    var result3 = c != 11;
+    console.log(result3);   /////false면 if안넣으면 안뜸.
+
+    ///////비교연산
+    // 👉 == 같냐?
+    // 👉 != 다르냐?
+    // 👉 === 완전히 같냐? (추천)
+
+    var r = 1 == 1 // 1이랑 1이랑 같아?
+    console.log("r:", r);
+
+    //////if문은 true일때만 실행됨. false 출력값 넣고싶으면 else써서 출력하기
+    if (1 == 1) {
+        console.log("같다!");
+    } else {
+        console.log("다르다!");
+    }
+
+    var t = 1 != 1 // 1이랑 1이랑 달라?
+    console.log("t:", t);
+
+    if(t == 1) {                       ////실행안됨! 왜냐면 false이기 때문
+        console.log("에에엥");
+    }
+    else {
+        console.log("풉")            /////false값 출력하고 싶으면 else 추가 !
+    }
+
+/////////증감연산
+    //x++; 지금 먼저 값 보여주고, 나중에 값 올릴께
+    let z = 5;
+    let y = z++;         //y에 들어가는 건 현재값인 5 // 그다음 z가 1증가해서 6
+    console.log(z); //6
+    console.log(y); //5
+
+    let e = 5;
+    let f = ++e;
+    console.log(e); //6 e가 먼저 ++사용하고 y에 6 저장, 값먼저 올리고 그걸 사용하는 것
+    console.log(f); //6
+
+////////////////////////////////////////////////
+//1번
+var num1 = 150;
+var num2 = 240;
+console.log(`150 + 240 = ${num1 + num2}`);   ///템플릿 문자열로쓰기 !!
+console.log(`150 - 240 = ${num1 - num2}`);
+console.log(`150 * 240 = ${num1 * num2}`);
+console.log(`150 % 240 = ${num1 % num2}`); //나누기 몫
+console.log(`150 / 240 = ${num1 / num2}`);
+
+    let name = "Gabby";
+    let age = 32;
+
+    console.log(`My name is ${name} and I am ${age} years old.`);
+
+////////2번
+var result4 = ((num2 * num2 * num2) /num1) >= 50;
+console.log(result4);
+
+//////////////////////////밑에 쌤
+var num1 = 150;
+var num2 = 240;
+var plus = num1 + num2;
+console.log(num1 + " + " + num2 + " = " + plus);
+console.log(`${num1} + ${num2} = ${plus}`);
+
+</script>

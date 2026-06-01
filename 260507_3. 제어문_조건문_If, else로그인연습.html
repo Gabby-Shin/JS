@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>제어문</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    ///조건문 if문/////////////////////////////////////////////////////
+    var num = 10;
+    if (num > 0) {
+        console.log('num은 6보다 큽니다.');
+    }
+    console.log('연습 끝')       /////////////무조건 뜸
+
+    var num = 1;
+    if (num > 6) {
+        console.log('num은 6보다 큽니다.');
+    }
+    console.log('연습 끝')
+
+    var userName = prompt("나마에와", "");
+        if(userName){
+            console.log(`${userName} 님 반갑습니다 !`)
+        }
+
+    ////else문  false를 반환, 조건식의 만족여부에 따라서/////////////////////////////////////////
+    var num2 = 11;
+    if (num2 => 7) {
+        console.log('num2은 7보다 큽니다.');
+    }
+    else {
+        console.log('num2은 7보다 작거나 이하다.');
+    }
+    console.log('연습 끝')
+/*********************************************************/
+    var num = prompt("당신이 좋아하는 숫자는?", "")
+
+        if (num % 2 == 0) {
+            console.log("당신은 짝수를 좋아하는군요!! 짝짝짝");
+        } else{
+            console.log("당신은 홀수를 좋아하는군요 !! 홀홀홀")
+        }
+    /*********************************************************/
+    var result = confirm("Are you sure?");
+    if (result) {
+        console.log("탈퇴완");
+    } else{
+        console.log("컴백홈");
+    }
+
+    /////////else if문 2가지 이상의 조건식과 정해놓은 조건을 만족하지 않았을 때 실행하는 코드///////////////////
+    var score = 80;
+    if (score >= 90) {
+        console.log('A학점');
+    }
+    else if (score >= 60) {
+        console.log('B학점');
+    }
+    else if (score >= 30) {
+        console.log('C학점');
+    }
+    else {
+        console.log('F학점');
+    }
+/////////중첩 if 문/////////////////////////////////////
+    var id = "sbs";
+    var pw = "1234";
+    var id2 = prompt("아이디를 입력하세용", "")
+    var pw2 = prompt("비밀번호를 입력하세용", "")
+
+    if (id === id2) {
+        console.log('id가 일치합니다');
+
+        if (pw === pw2) {
+            console.log('pw가 일치합니다');
+            console.log('로그인 성공');
+        } else {
+            console.log('pw가 일치하지 않습니다');
+        }
+    }else{
+        console.log('id가 일치하지 않습니다');
+    }
+
+</script>

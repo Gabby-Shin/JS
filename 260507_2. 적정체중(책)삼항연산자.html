@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>적정체중구하기</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    /////// 삼항 연산자 ( 조건식 ? 참 : 거짓 )
+    var result = 1 === 1 ? '참' : '거짓';
+    var result = 1 === 1 ? (2 === 2 ? "2" : "3") : 1;
+
+   /// 3개 숫자 중 최대값 찾기
+    var result = n1 < n2 ? (n2 < n3 ? n3 : n2) : (n1 < n3 ? n3 : n1)
+
+    /***********************************************************************/
+
+    var userheight = 180;
+    var userweight = 74;
+
+    var normal =(`(${userheight} - 100) * 0.9`);
+    var result = userweight >= normal;{
+         console.log("적정체중이아닙니다");
+    }
+        /////////////3항연산자
+    var result = (userheight >= normal - 5) && (userweight <= normal + 5);
+    result = result ? "적정체중" : "살빼 !!!"    ///조건(result자체가 조건이 됨) ? "값1(true)" : "값2(false)"
+    console.log(result);
+
+
+</script>
