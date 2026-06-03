@@ -13,30 +13,86 @@
 //객체(붕어빵)(속성들을 묶어놓은 것) == object == instance
 //객체를 만드는 도구, 정의 == class (붕어빵기계)
 // key: value
-    var 게시글1번 = {
-        번호: 1,
-        작성자: "나",
-        비밀번호: 1234,
+    const superman = {
+        name: "clark",        ///////key:name value:clark
+        age: 23,
+        hobby: "football",
   };
-    var 게시글2번 = {
-        번호: 2,
-        작성자: "너",
-        비밀번호: 13234,
-  };
-  console.log(게시글1번);
-  console.log(게시글2번);
+  console.log(superman);
 
-  // 객체가 갖는 value 가져오기
-  var writer = 게시글1번.작성자;
-  // []를 사용해서 가져오기 (문자열로 묶기!@)
-  console.log("작성자:", writer)
-  var writer = 게시글1번['작성자']
-  // 객체가 가지는 소성의 value를 변경하기
-  게시글1번.작성자 = "나였다";
-  // 객체에 속성을 추가하기, 기존에 속성이 있으면 수정되고, 아니면 추가됨.
-  게시글1번.작성날짜 = "2023-05-11";
-  console.log(게시글1번);
+//////접근
+superman.name
+superman['name']
+superman.age
+superman['age']
+
+console.log(superman.name);
+
+////////추가
+superman.gender = "male";
+superman['gender'] = "male";
+superman.hairColor = "black";
+
+console.log(superman.gender);
+
+////////삭제하기
+// console.log(delete superman.hairColor)
+
+console.log(superman);
 
 
-rrrrrrrrrrrrrrrrrrrrrr
+///////단축 프로퍼티
+const name= "clark";
+const age= 23;
+
+const superman= {
+    name : name,
+    age : age,
+};  /////이면
+const superman= {
+    name,
+    age,
+};  //////로 단축프로퍼티로 사용할 수 있음.
+//
+//
+// ///////////
+const Queen = {
+    name: "gabby",
+    age: 32,};
+Queen.gender = "female";
+console.log(Queen);
+
+//////이름과 나이를 받아서 객체(정보묶음)로 반환
+function makeObject(name, age){
+    return {
+        username: name,
+        userage: age,
+        usergender: "female",
+    }
+}
+    const Girl = makeObject("gabby", 32);
+    console.log(Girl);
+    console.log("userage" in Girl);  //////key값 찾아낼 수 있음
+    console.log("birthday" in Girl);
+
+///////////////////////////////////////////
+///객체 for.....in
+for(key in Queen){
+    // console.log(key);  //////////Queen이 가지고있는 key값
+    console.log(Queen[key]); ///////Queen이 가지고있는 value값
+                              /////////Queen.usergender = "female";
+                              // Queen['usergender'] = "female";
+}
+//////////////30살인사람만 이름 출력
+var users = [
+    { name: "gabby", age: 32 },
+    { name: "john", age: 25 },
+    { name: "mike", age: 40 }
+];
+
+for{let i =0; i < users.length; i++}{
+    if(users[i].age > 30){              ///users[0].key 붙인셈
+        console.log(users[i].name);
+    }
+}
 </script>

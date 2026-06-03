@@ -9,36 +9,66 @@
 </body>
 </html>
 <script>
-    var a = 1;
-    a = 2;
+
     // 배열 == Array == list 서랍장 같은 개념   , log = 출력
+    // 여러개를 한 번에 담는 상자
     var arr = [1,3,5,6,35];
     console.log(arr);
+
     var num = arr[0];// 0번 인덱스의 데이터 가져오기
     console.log(num); // 가져온 데이터 확인,출력
+
     arr[0] = 100; // 10,을 100으로 교체
     console.log(arr); // 변경된 데이터 확인, 다시 보여줘
 
+    //////////////////////////////////////////////////////////
+    var fruits = ["apple", "banana", "orange"];
 
+    fruits[0] = "melon";  ////값바꾸기
+    console.log(fruits);
 
-    ///가희
-    var arr = [20, 4 ,6, 430, 45]
-    console.log(arr);
-    var num = arr[2];
-    console.log(num);
+    fruits.push("grape"); //뒤에 추가하기
+    console.log(fruits);
 
+    fruits.unshift("kiwi"); /////앞에추가하기
+    console.log(fruits);
 
+    fruits.pop();
+    console.log(fruits);  /////뒤에 삭제하기
 
+    fruits.shift(); //////앞에삭제하기
+    console.log(fruits);
 
+    console.log(fruits.length);  //길이확인하기
 
+    ////////////////////////////////////////////////////////
+    var arr = ["a", "b", "c"];
+    var str = arr.join("");
+    console.log(str);   ////abc
 
+    var s = "a b c";
+    var arr = s.split(" ");
+    console.log(arr);  ///['a', 'b', 'c']
 
+    /////////////////////////////////
+    //반복문 진짜 중요!!!!!
+    for (let i = 0; i < fruits.length; i++) {
+        console.log(fruits[i]);
+    }
 
+///////////////////////////////////////////////////
 
+    var msg = ["a", "b", "c", "d", "e"];
 
+    msg.splice(1, 1);   ///(시작위치, 개수)
+    console.log(msg); // ["a", "c"]만 남음.
 
+    msg.splice(1, 0, "x"); // splice(시작, 삭제개수, 추가값)
+    console.log(msg);
 
-
+    var index = msg.indexOf("e");
+    msg.splice(index, 1);
+    console.log(msg); //"a"만 남음
 
 
 
